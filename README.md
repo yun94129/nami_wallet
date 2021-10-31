@@ -49,3 +49,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Blockfrost API doc 
 https://docs.blockfrost.io/
+
+
+## Network status
+window.cardano.getNetworkId() === 1) //mainnet
+window.cardano.getNetworkId() === 0) //testnet
