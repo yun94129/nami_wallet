@@ -13,8 +13,10 @@ export async function getServerSideProps(req) {
     const { address } = req.query 
   async function getAddressInfo() {
     try {
-      const response = await axios.get(`${ADDRESSES}/${address}`);
-      //console.log(response.data)
+      const response = await axios.get(`https://cardano-testnet.blockfrost.io/api/v0/addresses/${address}`, {
+        headers: {
+          'project_id': 'testnetUPmvF7J3QegmOt7tbOpzSVrduuhiDIm5'
+        }});
       return response.data;
     } catch (error) {
       console.error(error.response);

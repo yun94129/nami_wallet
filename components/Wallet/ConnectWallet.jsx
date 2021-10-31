@@ -169,7 +169,8 @@ const NoNami = (toast) => {
 };
 
 const WrongNetworkToast = async (toast) => {
-    if ((await window.cardano.getNetworkId()) === 1) {
+    // if ((await window.cardano.getNetworkId()) === 1) { //mainnet
+    if ((await window.cardano.getNetworkId()) === 0) { //testnet
         return true;
     }
     toast({
